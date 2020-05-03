@@ -1,0 +1,258 @@
+html {
+    font-size: 10px;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.mainContainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(34, 34, 34);
+
+    display: grid;
+    grid-template-columns: 21vw 58vw 21vw;
+    grid-template-rows: 13vh 74vh 13vh;
+        
+    
+}
+
+.gameOver {
+    display: flex;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    color: white;
+    font-size: 1.7rem;
+
+    justify-content: center;
+
+    visibility: hidden;
+}
+
+.welcomeDiv {
+    display: grid;
+    background-color: rgba(233, 233, 233, 0);
+    visibility: visible;
+
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 30% 20% 20% 30%;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.nameForm {
+    display: grid;
+    background-color: rgba(233, 233, 233, 0);
+    visibility: hidden;
+
+    font-size: 2.7rem;
+    color: white;
+
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 35% 10% 10% 10% 35%;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.playerOneName {
+    display: flex;
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+    
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.playerTwoName {
+    display: flex;
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 1;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#nameSubmit {
+
+    grid-column: 1 / span 3;
+    grid-row: 4 / span 1;
+
+}
+
+input {
+    border-radius: 1rem;
+    padding-left: .5rem;
+    width: 30rem;
+    height: 3rem;;
+    border-style: solid;
+    border: .2rem;
+    margin-left: 1rem;
+
+    padding-top: .4rem;
+    padding-bottom: none;
+    font-size: 1.8rem;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 50%;
+    font-size: 3rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 7rem;
+    height: 6rem;
+    text-align: center;
+    color: rgb(70, 67, 67);
+    background: white;
+
+
+}
+
+.button:hover {
+    transform: scale(1.1);
+    border-color: black;
+    box-shadow: 0 0 1rem black;
+}
+
+.submit {
+    border-radius: 1.5rem;
+    width: 8rem;
+    height: 3rem;
+    font-size: 2rem;
+    margin-left: 1rem;
+
+    border-style: solid;
+    border-width: .2rem;
+    border-color: rgb(184, 171, 171);
+}
+
+
+.gameStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+    border-radius: 2.2rem;
+    font-size: 2rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 30rem;
+    height: 3rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.678);
+    background: white;
+
+
+    align-self: start;
+    justify-self: center;
+
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.welcome {
+    display: grid;
+    grid-column: 1 / span 3;
+    grid-row: 2 / 3;
+    color: white;
+    font-size: 2.6rem;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.gameStart:hover {
+    transform: scale(1.1);
+    border-color: black;
+    box-shadow: 0 0 1rem black;
+}
+
+
+.gameBoard {
+    display: grid;
+    background-color: rgba(233, 233, 233, 0);
+    visibility: hidden;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    grid-template-columns: 33.3333% 33.3333% 33.3333%;
+    grid-template-rows: 33.3333% 33.3333% 33.3333%;
+    grid-template-areas: 
+        "one two three"
+        "four five six"
+        "seven eight nine";
+
+    
+
+}
+
+.tableDiv {
+    display: grid;
+    font-size: 15rem;
+    
+    align-items: center;
+    justify-items: center;
+    color: white;
+
+}
+
+#one {
+    grid-area: one;
+    border-right: .8rem solid;
+    border-bottom: .8rem solid;
+}
+
+#two {
+    grid-area: two;
+    border-right: .8rem solid;
+    border-bottom: .8rem solid;
+}
+
+#three {
+    grid-area: three;
+    border-bottom: .8rem solid;
+    
+}
+
+#four {
+    grid-area: four;
+    border-right: .8rem solid;
+    border-bottom: .8rem solid;
+    border-bottom: .8rem solid;
+}
+
+#five {
+    grid-area: five;
+    border-right: .8rem solid;
+    border-bottom: .8rem solid;
+}
+
+#six {
+    grid-area: six;
+    border-bottom: .8rem solid;
+}
+
+#seven {
+    grid-area: seven;
+    border-right: .8rem solid;
+}
+
+#eight {
+    grid-area: eight;
+    border-right: .8rem solid;
+}
+
+#nine {
+    grid-area: nine;
+}
